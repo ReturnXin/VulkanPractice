@@ -26,7 +26,7 @@ INCLUDE	:= include
 
 # define lib directory
 LIB		:= lib
-Libraries := -lglad -lglfw3dll -llibassimp
+Libraries := -lglad -lglfw3dll -llibassimp -lglfw3 -lvulkan-1
 
 ifeq ($(OS),Windows_NT)
 LIBRARIES	:= -lglad -lglfw3dll -llibassimp
