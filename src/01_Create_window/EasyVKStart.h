@@ -11,6 +11,7 @@
 #include <functional>
 #include <chrono>
 #include <numeric>
+#include <span>
 
 //GLM
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE

@@ -26,7 +26,7 @@ INCLUDE	:= include
 
 # define lib directory
 LIB		:= lib
-Libraries := -lglad -lglfw3dll -llibassimp -lglfw3 -lvulkan-1
+Libraries := -lglfw3dll -lglfw3 -lvulkan-1
 
 ifeq ($(OS),Windows_NT)
 LIBRARIES	:= -lglad -lglfw3dll -llibassimp
@@ -56,8 +56,8 @@ LIBS		:= $(patsubst %,-L%, $(LIBDIRS:%/=%))
 
 # define the C source files
 SOURCES		:= $(wildcard $(patsubst %,%/*.cpp, $(SOURCEDIRS)))
-SOURCES	+= include/imgui/imgui_impl_glfw.cpp include/imgui/imgui_impl_opengl3.cpp
-SOURCES	+= include/imgui/imgui.cpp include/imgui/imgui_demo.cpp include/imgui/imgui_draw.cpp include/imgui/imgui_widgets.cpp
+# SOURCES	+= include/imgui/imgui_impl_glfw.cpp include/imgui/imgui_impl_opengl3.cpp
+# SOURCES	+= include/imgui/imgui.cpp include/imgui/imgui_demo.cpp include/imgui/imgui_draw.cpp include/imgui/imgui_widgets.cpp
 
 # define the C object files 
 OBJECTS		:= $(SOURCES:.cpp=.o)
